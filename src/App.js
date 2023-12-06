@@ -22,7 +22,6 @@ function App() {
   console.log("fuera",data)
   return (
     <div className="App">
-      <h1>hola valen y maria </h1>
       <Bar />
       <Footer />
     </div>

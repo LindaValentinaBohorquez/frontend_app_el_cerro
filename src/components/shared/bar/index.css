@@ -1,0 +1,9 @@
+.bar {
+    border: solid black 5px;
+    background-color: green;
+}
+
+.body-bar {
+    display: flex;
+    justify-content: center;
+}
