@@ -1,9 +1,68 @@
 .bar {
-    border: solid black 5px;
-    background-color: green;
+    border: solid black 3px;
+    background-color: hsl(108, 48%, 71%);
+    padding: 10px; 
 }
 
 .body-bar {
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+a img {
+    width: 200px; /* Ajusta el ancho del logo según tus preferencias */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    margin-right: 10px; /* Ajusta el margen derecho para separar el logo de otros elementos */
+}
+
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+
+.container input {
+    padding: 15px; /* Ajusta el espaciado interno del campo de entrada según tus preferencias */
+    border: none; /* Elimina el borde */
+    border-radius: 15px; /* Aplica un borde redondeado */
+    width: 300px;
+}
+
+.container button {
+    background-color:  hsl(108, 48%, 71%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 1px 5px;
+    cursor: pointer;
+    margin-left: 5px; 
+}
+
+.container button img {
+    width: 20px; /* Ajusta el tamaño del ícono según tus preferencias */
+    height: 20px; /* Mantiene la proporción original de la imagen */
+}
+
+.shopping-cart {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding: 0 10px;
+    cursor: pointer;
+}
+
+.shopping-cart img {
+    width: 50px; /* Ajusta el tamaño según tus preferencias */
+    height: auto; /* Mantiene la proporción original de la imagen */
+    margin-right: 5px;
+}
+
+.item-count {
+    background-color: rgb(0, 0, 0);
+    color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+    
 }
