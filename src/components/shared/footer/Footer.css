@@ -1,0 +1,16 @@
+.footer {
+    background-color: hsl(108, 48%, 71%);
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .logo-container,
+  .description-container {
+    margin: 10px; /* Ajusta el margen según sea necesario */
+  }
+  
+  .logo-image,
+  .description-image {
+    max-width: 10%; /* Ajusta el tamaño según sea necesario */
+    height: auto;
+  }
