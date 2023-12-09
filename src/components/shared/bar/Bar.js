@@ -9,7 +9,6 @@ function Bar() {
             <div className="body-bar">
                 <ul>
                     <li><a href="/">El Cerro</a></li>
-                    <li><a href="/payment">Carrito de Compras</a></li>
                 </ul>
                 <a href="/"><img src="https://i.postimg.cc/zG85wrd3/El-Cerro.png" alt="Logo del supermercado El Cerro"></img></a>
                 <Search />
@@ -18,6 +17,9 @@ function Bar() {
                     <button><a href="/"><img src="https://i.postimg.cc/MHh7wH9S/lupa1.png" alt="lupa de busqueda"></img></a></button>
                 </div>
                 <ShoppingCart />
+                <ul>
+                    <li><a href="/payment">Carrito de Compras</a></li>
+                </ul>
             </div>
             <Menu />
             <div className="border-bar">

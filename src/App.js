@@ -7,6 +7,7 @@ import Landing from './components/landing/Landing';
 import ListProducts from './components/list_products/ListProducts';
 import Payment from './components/payment/Payment';
 
+
 function App() {
   const data = {
     "store": "El cerro",

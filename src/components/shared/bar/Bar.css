@@ -1,20 +1,32 @@
 body {
     margin: 0;
     padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  
+.App {
+    flex: 1;
 }
 
 .bar {
     background-color: hsl(108, 48%, 71%);
+    flex-direction: column;
+    align-items: center;
 }
 
 .body-bar {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%; /* Ensure the content spans the full width */
+    max-width: 1200px; /* Adjust the maximum width as needed */
+    margin: 0 auto; /* Center the content horizontally */
 }
 
 a img {
-    width: 200px;
+    width: 100px;
     height: auto;
     margin-right: 10px;
 }
@@ -25,10 +37,10 @@ a img {
 }
 
 .container input {
-    padding: 15px;
+    padding: 10px;
     border: none;
     border-radius: 15px;
-    width: 500px;
+    width: 700px;
 }
 
 .container button {
@@ -55,7 +67,7 @@ a img {
 }
 
 .shopping-cart img {
-    width: 50px;
+    width: 35px;
     height: auto;
     margin-right: 5px;
 }
@@ -65,7 +77,7 @@ a img {
     color: white;
     border-radius: 100%;
     padding: 2px 6px;
-    font-size: 12px;
+    font-size: 10px;
 }
 
 .border-bar {
@@ -76,7 +88,7 @@ a img {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    align-items: 1rem0;
+    align-items: 1rem 0;
 }
 
 .navbar .fa-bars {
@@ -86,28 +98,33 @@ a img {
 .menu {
     display: flex;
     gap: 2rem;
-    justify-content: center; /* Añade esta línea para centrar los elementos del menú horizontalmente */
-    align-items: center;
 }
 
 .menu li {
     list-style: none;
-    border-right: 1px solid rgb(255, 255, 255);
-    text-align: center;
-}
-
-.menu li:last-child {
-    border-right: none; 
 }
 
 .menu a {
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 0.85rem;
     color: white;
     font-weight: 500;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-family: 'Sorts Mill Goudy', serif;
-    text-align: center;
+}
+
+.menu a::after{
+    content: "";
+    width: 0.75rem;
+    height: 1px;
+    background-color: aliceblue;
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+.menu a:hover{
+    color:white;
 }
