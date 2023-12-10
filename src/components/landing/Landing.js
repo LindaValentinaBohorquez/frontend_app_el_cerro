@@ -1,6 +1,10 @@
+import Carrusel from "./carrusel/Carrusel";
+
 function Landing(){
     return (
-        <h1>esto es el Landing</h1>
+        <div>
+            <Carrusel/>
+        </div>
     )
 
 }
