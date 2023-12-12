@@ -1,0 +1,48 @@
+.menu {
+    background-color: #AB8742;
+}
+
+.menu-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-items: 1rem 0;
+}
+
+.menu-navbar .fa-bars {
+    display: none;
+}
+
+.menu-items {
+    display: flex;
+    gap: 2rem;
+}
+
+.menu-items li {
+    list-style: none;
+}
+
+.menu-items a {
+    text-decoration: none;
+    font-size: 0.85rem;
+    color: white;
+    font-weight: 500;
+    font-family: 'Sorts Mill Goudy', serif;
+}
+
+.menu-items a::after{
+    content: "";
+    width: 0.75rem;
+    height: 1px;
+    background-color: aliceblue;
+    position: absolute;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    opacity: 0;
+    transition: all .3s ease;
+}
+
+.menu-items a:hover{
+    color:white;
+}
