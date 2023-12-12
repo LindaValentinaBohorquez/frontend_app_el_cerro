@@ -1,47 +1,46 @@
+/* Carrusel.css */
 
-.slider {
-    height: 500px;
+.slider-container {
+    position: relative;
     overflow: hidden;
-}
-
-.slider ul {
-    display: flex;
-    animation: cambio 25s infinite linear alternate;
-    width: 300%;
-    /* Ancho total del carrusel: 100% por imagen */
-}
-
-.slider li {
     width: 100%;
-    /* Cada imagen ocupa el 100% del contenedor */
-    list-style: none;
-}
-
-.slider img {
+    max-width: 700px; /* Ajusta el ancho máximo según tus necesidades */
+    margin: auto;
+    margin-top: 20px; /* Ajusta el margen superior según tus necesidades */
+    margin-bottom: 1000px; /* Ajusta el margen inferior según tus necesidades */
+  }  
+  
+  .slide {
+    display: none;
+  }
+  
+  .showing {
+    display: block;
+  }
+  
+  .slider-container img {
     width: 100%;
-    /* Ocupa el 100% del ancho del contenedor li */
     height: auto;
-    /* Mantiene la proporción 16:9 de las imágenes */
-}
-
-@keyframes cambio {
-    0% {
-        margin-left: 0;
-    }
-
-    25% {
-        margin-left: -100%;
-    }
-
-    50% {
-        margin-left: -200%;
-    }
-
-    75% {
-        margin-left: -300%;
-    }
-
-    100% {
-        margin-left: 0;
-    }
-}
+  }
+  
+  .buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+  }
+  
+  .controls {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .controls:hover {
+    background-color: #555;
+  }
+  
