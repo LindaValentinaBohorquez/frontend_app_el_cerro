@@ -30,7 +30,7 @@
     font-family: 'Sorts Mill Goudy', serif;
 }
 
-.menu-items a::after{
+.menu-items a::after {
     content: "";
     width: 0.75rem;
     height: 1px;
@@ -43,6 +43,6 @@
     transition: all .3s ease;
 }
 
-.menu-items a:hover{
-    color:white;
+.menu-items a:hover {
+    color: white;
 }

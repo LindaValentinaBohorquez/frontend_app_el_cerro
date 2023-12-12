@@ -1,4 +1,4 @@
-function Payment(){
+function Payment() {
     return (
         <h1>esto es el Payment</h1>
     )

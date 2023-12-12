@@ -1,9 +1,9 @@
 import Carrusel from "./carrusel/Carrusel";
 
-function Landing(){
+function Landing() {
     return (
         <div>
-            <Carrusel/>
+            <Carrusel />
         </div>
     )
 

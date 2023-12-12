@@ -12,23 +12,41 @@
 .slider ul {
     display: flex;
     animation: cambio 10s infinite linear alternate;
-    width: 300%; /* Ancho total del carrusel: 100% por imagen */
+    width: 300%;
+    /* Ancho total del carrusel: 100% por imagen */
 }
 
 .slider li {
-    width: 100%; /* Cada imagen ocupa el 100% del contenedor */
+    width: 100%;
+    /* Cada imagen ocupa el 100% del contenedor */
     list-style: none;
 }
 
 .slider img {
-    width: 100%; /* Ocupa el 100% del ancho del contenedor li */
-    height: auto; /* Mantiene la proporción 16:9 de las imágenes */
+    width: 100%;
+    /* Ocupa el 100% del ancho del contenedor li */
+    height: auto;
+    /* Mantiene la proporción 16:9 de las imágenes */
 }
 
 @keyframes cambio {
-    0% { margin-left: 0; }
-    25% { margin-left: -100%; }
-    50% { margin-left: -200%; }
-    75% { margin-left: -300%; }
-    100% { margin-left: 0; }
+    0% {
+        margin-left: 0;
+    }
+
+    25% {
+        margin-left: -100%;
+    }
+
+    50% {
+        margin-left: -200%;
+    }
+
+    75% {
+        margin-left: -300%;
+    }
+
+    100% {
+        margin-left: 0;
+    }
 }
