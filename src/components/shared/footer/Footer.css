@@ -1,16 +1,3 @@
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  margin: 0;
-}
-
-#root {
-  display: flex;
-  flex-direction: column;
-  flex: 1;
-}
-
 .footer {
   background-color: #9ED890;
   color: rgb(0, 0, 0);
@@ -24,33 +11,33 @@ body {
   gap: 5px;
 }
 
-.contact-info,
-.about-us {
+.footer-contact-info,
+.footer-about-us {
   max-width: 300px;
 }
 
-.phone-number {
+.footer-phone-number {
   font-weight: bold;
 }
 
-.logo-container {
+.footer-logo-container {
   margin-top: 1px;
 }
 
-.logo-image {
+.footer-logo-image {
   width: 200px;
   height: auto;
 }
 
-.social-icons {
+.footer-social-icons {
   display: flex;
   gap: 1px;
 }
 
-.social-icon1,
-.social-icon2,
-.social-icon3,
-.social-icon4 {
+.footer-social-icon1,
+.footer-social-icon2,
+.footer-social-icon3,
+.footer-social-icon4 {
   width: 30px;
   /* Tamaño de las imágenes */
 }
