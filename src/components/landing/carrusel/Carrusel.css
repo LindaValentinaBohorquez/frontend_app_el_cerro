@@ -1,46 +1,54 @@
 /* Carrusel.css */
 
 .slider-container {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    max-width: 700px; /* Ajusta el ancho máximo según tus necesidades */
-    margin: auto;
-    margin-top: 20px; /* Ajusta el margen superior según tus necesidades */
-    margin-bottom: 60px; /* Ajusta el margen inferior según tus necesidades */
-  }  
-  
-  .slide {
-    display: none;
-  }
-  
-  .showing {
-    display: block;
-  }
-  
-  .slider-container img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .buttons {
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    transform: translateY(-50%);
-  }
-  
-  .controls {
-    background-color: #333;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-  }
-  
-  .controls:hover {
-    background-color: #555;
-  }
-  
+  position: relative;
+  overflow: hidden;
+  max-width: 700px;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 60px;
+}
+
+.slide {
+  display: none;
+}
+
+.showing {
+  display: block;
+}
+
+.slider-container img {
+  width: 100%;
+  height: auto;
+}
+
+.buttons {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.controls {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.controls:hover {
+  background-color: #555;
+  transition: background-color 0.3s ease; /* Agregado: transición suave al pasar el ratón */
+}
+
+/* Agregado: Estilo para los botones de navegación */
+.controls.prev {
+  border-radius: 50% 0 0 50%;
+}
+
+.controls.next {
+  border-radius: 0 50% 50% 0;
+}
