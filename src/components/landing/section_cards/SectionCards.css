@@ -1,0 +1,37 @@
+/* SectionCards.css */
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas en la cuadrícula */
+    gap: 20px; /* Espacio entre las tarjetas */
+    margin-bottom: 300px; /* Ajusta el margen inferior según sea necesario */
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+  
+  .card {
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    color: #000; /* Color del texto de la tarjeta */
+    transition: transform 0.2s ease-in-out; /* Transición de animación suave */
+  }
+  
+  .card:hover {
+    transform: scale(1.05); /* Escala la tarjeta al pasar el mouse para un efecto de aumento */
+  }
+  
+  .card-img-top {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card-body {
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .card-title {
+    margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
