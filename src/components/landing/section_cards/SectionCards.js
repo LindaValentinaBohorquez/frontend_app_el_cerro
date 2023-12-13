@@ -15,7 +15,7 @@ function SectionCards() {
   return (
     <div className="card-grid">
       {products.map(product => (
-        <Link to={`/ListProducts/${product.id}`} key={product.id} className="card">
+        <Link to="/products" key={product.id} className="card">
           <img src={product.imageSrc} className="card-img-top" alt={`Product ${product.id}`} />
           <div className="card-body">
             <h5 className="card-title">{`Product ${product.id}`}</h5>

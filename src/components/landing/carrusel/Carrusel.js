@@ -16,21 +16,21 @@ function Carrusel() {
     <div className="slider-container">
       <a href="/">
         <img
-          src="https://i.postimg.cc/NGCYdfDG/carrusel3.png"
+          src="https://i.postimg.cc/4dDgQRm5/1.png"
           alt="img 1"
           className={currentSlide === 0 ? "slide showing" : "slide"}
         />
       </a>
       <a href="/">
         <img
-          src="https://i.postimg.cc/wjLpx5p3/carrusel4.png"
+          src="https://i.postimg.cc/kXFmKZ9Q/2.png"
           alt="img 2"
           className={currentSlide === 1 ? "slide showing" : "slide"}
         />
       </a>
       <a href="/">
         <img
-          src="https://i.postimg.cc/4dFMQngr/Arroz-2.png"
+          src="https://i.postimg.cc/zX5mzjWV/3.png"
           alt="img 3"
           className={currentSlide === 2 ? "slide showing" : "slide"}
         />

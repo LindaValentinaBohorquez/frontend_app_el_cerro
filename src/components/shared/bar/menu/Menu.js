@@ -4,7 +4,7 @@ function Menu() {
     return (
         <div className="menu">
             <nav className="menu-navbar">
-                <ul class="menu-items">
+                <ul className="menu-items">
                     <li><a href="/products"> Carnes rojas / blancas / de mar </a></li>
                     <li><a href="/products"> Verduras / frutas / vegetales </a></li>
                     <li><a href="/products"> Huevos, lácteos y derivados </a></li>

@@ -3,36 +3,35 @@
 .card-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* 3 columnas en la cuadrícula */
   gap: 20px;
-  /* Espacio entre las tarjetas */
   margin-bottom: 300px;
-  /* Ajusta el margen inferior según sea necesario */
-  margin-left: 60px;
-  margin-right: 60px;
+  margin-left: 20px;
+  margin-right: 20px;
+
 }
 
 .card {
   text-decoration: none;
-  /* Elimina el subrayado del enlace */
   color: #000;
-  /* Color del texto de la tarjeta */
   transition: transform 0.2s ease-in-out;
-  /* Transición de animación suave */
+  box-shadow: 2px 2px 8px 4px #d3d3d3d1;
+  border-radius: 15px;
+  width: 400px;
+  margin: 10px;
 }
 
 .card:hover {
   transform: scale(1.05);
-  /* Escala la tarjeta al pasar el mouse para un efecto de aumento */
 }
 
 .card-img-top {
   width: 100%;
   height: auto;
+  border-radius: 15px;
 }
 
 .card-body {
-  padding: 10px;
+  padding: 1px;
   text-align: center;
 }
 
@@ -40,4 +39,16 @@
   margin-top: 10px;
   font-size: 18px;
   font-weight: bold;
+}
+
+.card {
+  text-decoration: none;
+  color: #000;
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 2px 2px 8px 4px #d3d3d3d1;
+  border-radius: 15px;
+}
+
+.card:hover {
+  transform: scale(1.05);
 }
