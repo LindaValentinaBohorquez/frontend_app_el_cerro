@@ -8,7 +8,7 @@ function ListProducts() {
             descripcion: "Para desinfección y limpieza.",
             id: "0",
             nombre: "Cloro",
-            precio: 2.1,
+            precio: 2.100,
             tipo: "Aseo Hogar",
             url: "https://i.postimg.cc/cCgv6hwg/1.png"
         },
@@ -17,7 +17,7 @@ function ListProducts() {
             descripcion: "Pechuga de pollo, 1 KG.",
             id: "1",
             nombre: "Pollo",
-            precio: 16.7,
+            precio: 16.700,
             tipo: "Carne Blanca",
             url: "https://i.postimg.cc/8CZcH9bf/2.png"
         },
@@ -26,7 +26,7 @@ function ListProducts() {
             descripcion: "Doritos Clásicos, 200 gm.",
             id: "10",
             nombre: "Doritos",
-            precio: 4.6,
+            precio: 4.600,
             tipo: "Paquetes",
             url: "https://i.postimg.cc/HnyLTx1b/3.png"
         },
@@ -35,7 +35,7 @@ function ListProducts() {
             descripcion: "Unidad",
             id: "11",
             nombre: "Manzana Verde",
-            precio: 2.68,
+            precio: 2.680,
             tipo: "Frutas",
             url: "https://i.postimg.cc/9XrJHqzs/4.png"
         },
@@ -44,7 +44,7 @@ function ListProducts() {
             descripcion: "Unidad",
             id: "12",
             nombre: "Tomate",
-            precio: 1.2,
+            precio: 1.200,
             tipo: "Verdura",
             url: "https://i.postimg.cc/xjhgfTz8/5.png"
         },
@@ -53,7 +53,7 @@ function ListProducts() {
             descripcion: "Azúcar blanco, 2500 gr",
             id: "13",
             nombre: "Azúcar",
-            precio: 10.49,
+            precio: 10.490,
             tipo: "Despensa",
             url: "https://i.postimg.cc/xTm5cDvR/6.png"
         },
@@ -62,7 +62,7 @@ function ListProducts() {
             descripcion: "Cartón de huevos, 30 und.",
             id: "14",
             nombre: "Huevos",
-            precio: 17.99,
+            precio: 17.990,
             tipo: "Despensa",
             url: "https://i.postimg.cc/g2PDhS4P/7.png"
         },
@@ -71,7 +71,7 @@ function ListProducts() {
             descripcion: "Lomo Aceite, 170 gr.",
             id: "15",
             nombre: "Atún",
-            precio: 4.99,
+            precio: 4.990,
             tipo: "Despensa",
             url: "https://i.postimg.cc/y8XTymr3/8.png"
         },
@@ -80,7 +80,7 @@ function ListProducts() {
             descripcion: "Pan Tajado Blanco, 730 gr.",
             id: "16",
             nombre: "Pan Tajado",
-            precio: 7.2,
+            precio: 7.200,
             tipo: "Panadería",
             url: "https://i.postimg.cc/XvjkHrTH/9.png"
         },
@@ -89,7 +89,7 @@ function ListProducts() {
             descripcion: "24 und, sabor a fresa, 456 gm.",
             id: "17",
             nombre: "Bon Bon Bum",
-            precio: 7.49,
+            precio: 7.490,
             tipo: "Confitería",
             url: "https://i.postimg.cc/yY0h7hKp/10.png"
         },
@@ -98,7 +98,7 @@ function ListProducts() {
             descripcion: "Jabón Líquido con fragancia a Coco.",
             id: "18",
             nombre: "Jabón Líquido",
-            precio: 13.6,
+            precio: 13.600,
             tipo: "Aseo Personal",
             url: "https://i.postimg.cc/cLZRCK4x/11.png"
         },
@@ -107,7 +107,7 @@ function ListProducts() {
             descripcion: "Tortillas Clásicas, 450 gr.",
             id: "2",
             nombre: "Tortillas",
-            precio: 12.99,
+            precio: 12.990,
             tipo: "Panadería",
             url: "https://i.postimg.cc/FHZjL97j/12.png"
         },
@@ -116,7 +116,7 @@ function ListProducts() {
             descripcion: "Producto cosmético, detergente, limpia el cabello y cuero cabelludo.",
             id: "3",
             nombre: "Shampoo",
-            precio: 12.99,
+            precio: 12.990,
             tipo: "Aseo Personal",
             url: "https://i.postimg.cc/W4Yg5Xmz/13.png"
         },
@@ -125,7 +125,7 @@ function ListProducts() {
             descripcion: "Tilapia Roja",
             id: "4",
             nombre: "Pescado",
-            precio: 17.99,
+            precio: 17.990,
             tipo: "Carne De Mar",
             url: "https://i.postimg.cc/DfXLcQSf/14.png"
         },
@@ -134,7 +134,7 @@ function ListProducts() {
             descripcion: "Filetes de Res",
             id: "5",
             nombre: "Carne",
-            precio: 17.99,
+            precio: 17.990,
             tipo: "Carne Roja",
             url: "https://i.postimg.cc/HkByLBhz/15.png"
         },
@@ -143,7 +143,7 @@ function ListProducts() {
             descripcion: "Detergente tamaño estándar.",
             id: "6",
             nombre: "Detergente Para Ropa",
-            precio: 10.99,
+            precio: 10.990,
             tipo: "Aseo Hogar",
             url: "https://i.postimg.cc/GptsTv0C/16.png"
         },
@@ -170,7 +170,7 @@ function ListProducts() {
             descripcion: "Gaseosa Coca-Cola tamaño familiar, 6000 ml.",
             id: "9",
             nombre: "Coca-Cola",
-            precio: 9.5,
+            precio: 9.500,
             tipo: "Gaseosa",
             url: "https://i.postimg.cc/0y2zh7yw/19.png"
         }
@@ -178,8 +178,13 @@ function ListProducts() {
 
     console.log("fuera", data)
     return (
-        <div className="list-products">
+        <div className="list-products-title">
+            <div className="listp-product-title">
+            <h2>Inicio &gt; Lista de productos</h2>
+            </div>
+            <div className="listp-product-title2">
             <h2>Listado de productos</h2>
+            </div>
             <div className="list-grid">
                 {data.map(product => {
                     return (

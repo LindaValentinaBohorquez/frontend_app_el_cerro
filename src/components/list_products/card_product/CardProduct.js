@@ -8,7 +8,7 @@ function CardProduct({name, description, price, id, url}) {
             </div>
             <div className="title">{name}</div>
             <div className="description">{description}</div>
-            <div className="title">{price}</div>
+            <div className="price">$ {price}</div>
             <div className="foot">
                 <a href="/">Agregar</a>
             </div>
