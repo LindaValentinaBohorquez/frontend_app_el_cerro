@@ -188,7 +188,7 @@ function ListProducts() {
             <div className="list-grid">
                 {data.map(product => {
                     return (
-                        <CardProduct name={product.nombre} description={product.descripcion} price={product.precio} id={product.id} url={product.url} />
+                        <CardProduct key={product.id} name={product.nombre} description={product.descripcion} price={product.precio} id={product.id} url={product.url} />
                     )
                 })}
             </div>

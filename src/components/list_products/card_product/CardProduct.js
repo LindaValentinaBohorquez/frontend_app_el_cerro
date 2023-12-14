@@ -1,6 +1,16 @@
 import "./CardProduct.css"
 function CardProduct({name, description, price, id, url}) {
-    console.log(id);
+
+    const onClick =() =>{
+        const value = localStorage.getItem('productsSelected');
+        if(value == null){
+            localStorage.setItem('productsSelected',id)
+        }
+        else{
+            localStorage.setItem('productsSelected',value +";"+id)
+        }
+    }
+
     return (
         <div className="card-Product-card">
             <div className="body-card-product">
@@ -10,7 +20,7 @@ function CardProduct({name, description, price, id, url}) {
             <div className="description">{description}</div>
             <div className="price">$ {price}</div>
             <div className="foot">
-                <a href="/">Agregar</a>
+                <button onClick={() =>onClick()}>Agregar</button>
             </div>
         </div>
     )

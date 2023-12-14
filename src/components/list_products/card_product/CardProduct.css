@@ -48,9 +48,11 @@
     text-align: center;
 }
 
-.foot a {
-    text-decoration: none;
+.foot button {
+    cursor: pointer;
     color: white;
+    background-color: transparent;
+    border: transparent;
 }
 
 .foot a:after {
