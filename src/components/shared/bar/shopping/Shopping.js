@@ -3,6 +3,8 @@ import ShoppingItem from "./shopping_item/ShoppingItem";
 import { Link } from 'react-router-dom';
 
 function Shopping({ isOpen, closeModal }) {
+    const productsSelect = localStorage.getItem('productsSelected')?.split(";")
+    console.log(productsSelect)
     if (!isOpen) return null;
     return (
         <div className="modal">
