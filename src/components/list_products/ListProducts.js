@@ -8,7 +8,7 @@ function ListProducts() {
             descripcion: "Para desinfección y limpieza.",
             id: "0",
             nombre: "Cloro",
-            precio: 2.100,
+            precio: 2.1,
             tipo: "Aseo Hogar",
             url: "https://i.postimg.cc/cCgv6hwg/1.png"
         },
