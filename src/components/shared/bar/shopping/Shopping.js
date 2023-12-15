@@ -14,7 +14,7 @@ function Shopping({ isOpen, closeModal }) {
                 <ShoppingItem />
                 <p>Total</p>
                 <p>$200</p>
-                <Link to="/payment">
+                <Link to="/payment/step1">
                     <button onClick={() => closeModal()}>Ir a pagar</button>
                 </Link>
             </div>
@@ -23,3 +23,4 @@ function Shopping({ isOpen, closeModal }) {
 }
 
 export default Shopping;
+
