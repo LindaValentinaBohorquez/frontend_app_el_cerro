@@ -1,15 +1,17 @@
 .footer {
   background-color: #9ED890;
   color: rgb(0, 0, 0);
-  padding: 10px;
+
   position: absolute;
   bottom: 0;
   width: 100%;
-  margin-top: 200px;
+  margin-top: 100px auto 0;
+  height: 40px; 
   /* Puedes ajustar esto según sea necesario */
 }
 
 .footer-content {
+  background-color: #9ED890;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -26,6 +28,7 @@
 }
 
 .footer-logo-container {
+  background-color: #9ED890;
   margin-top: 1px;
 }
 
