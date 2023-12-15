@@ -5,6 +5,9 @@ import Footer from './components/shared/footer/Footer';
 import { Route, Routes, useNavigate } from 'react-router-dom';
 import Landing from './components/landing/Landing';
 import ListProducts from './components/list_products/ListProducts';
+import Step1 from './components/payment/step1/Step1';
+import Step2 from './components/payment/step2/Step2';
+import Step3 from './components/payment/step3/Step3';
 import Payment from './components/payment/Payment';
 import SectionCards from './components/landing/section_cards/SectionCards';
 
@@ -13,6 +16,10 @@ function App() {
 
   const redirectToProducts = () => {
     navigate('/products');
+  };
+
+  const handleNextStep = () => {
+
   };
 
   const data = [
@@ -188,7 +195,14 @@ function App() {
       url: "https://i.postimg.cc/0y2zh7yw/19.png"
     }
   ]
-  localStorage.setItem('allProducts', data);
+  localStorage.setItem('allProducts', data);
+
+  const formData = {
+    nombre: '',
+    direccion: '',
+    email: '',
+    telefono: '',
+  };
 
   return (
     <div className="App">
@@ -199,6 +213,15 @@ function App() {
         <Route
           path="/SectionCards"
           element={<SectionCards redirectToProducts={redirectToProducts} />}
+        />
+        <Route path="/payment/step1" element={<Step1 />} />
+        <Route
+          path="/payment/step2"
+          element={<Step2 formData={formData} handleNextStep={handleNextStep} />}
+        />
+        <Route
+          path="/payment/step3"
+          element={<Step3 formData={formData} handleNextStep={handleNextStep} />}
         />
         <Route path="/payment" element={<Payment />} />
       </Routes>
