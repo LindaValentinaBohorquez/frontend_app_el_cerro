@@ -195,7 +195,7 @@ function App() {
       url: "https://i.postimg.cc/0y2zh7yw/19.png"
     }
   ]
-  localStorage.setItem('allProducts', data);
+  localStorage.setItem('allProducts', JSON.stringify(data));
 
   const formData = {
     nombre: '',
