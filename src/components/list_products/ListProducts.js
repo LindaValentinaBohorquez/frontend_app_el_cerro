@@ -176,7 +176,6 @@ function ListProducts() {
         }
     ]
 
-    console.log("fuera", data)
     return (
         <div className="list-products-title">
             <div className="listp-product-title">

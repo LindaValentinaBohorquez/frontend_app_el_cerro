@@ -1,6 +1,5 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import Shopping from "../../shared/bar/shopping/Shopping";
 import "./Step1.css"
 
 const Step1 = () => {
@@ -38,7 +37,6 @@ const Step1 = () => {
             <div className="step1-title1">
                 <h2>Lista de compras</h2>
             </div>
-            <Shopping isOpen={false} closeModal={() => {}} />
             <div className="total-and-button">
                 <p>Total: ${Total}</p>
                 <button onClick={handleNextClick} className="next-step-button">Continuar con la compra</button>
