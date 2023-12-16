@@ -19,6 +19,7 @@ function App() {
   if(error != null){
     toast.error(error);
   }
+  localStorage.setItem('allProducts', JSON.stringify(products));
 
   const navigate = useNavigate();
 
@@ -29,8 +30,6 @@ function App() {
   const handleNextStep = () => {
 
   };
-
-  localStorage.setItem('allProducts', JSON.stringify(products));
 
   const formData = {
     nombre: '',

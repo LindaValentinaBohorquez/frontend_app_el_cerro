@@ -1,22 +1,26 @@
 import { useState } from "react";
 import "./Search.css"
+import { useNavigate } from "react-router-dom";
 
 function Search() {
     const [inputValue, setInputValue] = useState('');
+    const navigate = useNavigate();
 
     const handleInputChange = (event) => {
         setInputValue(event.target.value);
-      };
+    };
+
 
     function searchByString() {
         const listProducts = JSON.parse(localStorage.getItem('allProducts'))
-        const results = listProducts.filter(object => {
+        const results = listProducts?.filter(object => {
             const nameMatch = object.nombre.toLowerCase().includes(inputValue.toLowerCase());
             const descriptionMatch = object.descripcion.toLowerCase().includes(inputValue.toLowerCase());
             return nameMatch || descriptionMatch;
         });
 
-        console.log(results);
+        localStorage.setItem('searchProducts', JSON.stringify(results));
+        navigate('/products');
     }
 
     return (
