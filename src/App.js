@@ -11,13 +11,14 @@ import Step3 from './components/payment/step3/Step3';
 import Payment from './components/payment/Payment';
 import SectionCards from './components/landing/section_cards/SectionCards';
 import useFetch from './hooks/useFetchData';
+import { Toaster, toast } from 'sonner';
 
 
 function App() {
-  const { data: products, loading, error } = useFetch("http://localhost:40571/AppElCerro/resources/producto/productos");
-  console.log("esto es product ",products)
-  console.log("esto es loading ",loading)
-  console.log("esto es error ",error)
+  const { data: products, error } = useFetch("http://localhost:40571/AppElCerro/resources/producto/productos");
+  if(error != null){
+    toast.error(error);
+  }
 
   const navigate = useNavigate();
 
@@ -40,6 +41,7 @@ function App() {
 
   return (
     <div className="App">
+      <Toaster />
       <Bar />
       <Routes>
         <Route path="/" element={<Landing />} />
