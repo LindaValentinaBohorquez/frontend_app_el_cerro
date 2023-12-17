@@ -26,7 +26,7 @@ function Shopping({ isOpen, closeModal }) {
                             description={product.descripcion}
                             price={product.precio}
                             id={product.id}
-                            url={product.url}
+                            url={product.img}
                             quantity={productsSelect.filter(item => parseInt(item) === parseInt(product.id)).length}
                         />
                     )
