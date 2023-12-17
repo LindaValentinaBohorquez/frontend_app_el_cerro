@@ -6,10 +6,17 @@ function Shopping({ isOpen, closeModal }) {
     if (!isOpen) return null;
     let productsSelect = localStorage.getItem('productsSelected')?.split(";")
     const listProducts = localStorage.getItem('allProducts')
-    let productsObj
+
+    if (!listProducts) {
+        console.error("Error: 'allProducts' is null or undefined.");
+        return null;
+    }
+    let productsObj;
+
     if (productsSelect?.length >= 0) {
         productsObj = JSON.parse(listProducts).filter(objeto => productsSelect.includes(objeto.id));
     }
+    
 
     return (
         <div className="modal">
