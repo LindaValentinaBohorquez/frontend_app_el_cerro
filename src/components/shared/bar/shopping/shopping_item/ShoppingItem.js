@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./ShoppingItem.css"
 
-function ShoppingItem({ name, description, price, id, img, quantity }) {
+function ShoppingItem({ name, description, price, id, img, quantity, getTotalValue }) {
     const [quantityProduct, setQuantityProduct] = useState(quantity);
     const plus = () => {
         const value = localStorage.getItem('productsSelected');
@@ -12,6 +12,7 @@ function ShoppingItem({ name, description, price, id, img, quantity }) {
             localStorage.setItem('productsSelected',value +";"+id)
         }
         setQuantityProduct(quantityProduct + 1)
+        getTotalValue()
     }
     const trash = () => {
         if (quantityProduct === 0) {
@@ -22,6 +23,7 @@ function ShoppingItem({ name, description, price, id, img, quantity }) {
             localStorage.setItem('productsSelected',listProducts.join(";"))
             setQuantityProduct(quantityProduct - 1)
         }
+        getTotalValue()
     }
     function deleteCoincidenci(array, id) {
         const arrayClonado = [...array];

@@ -5,18 +5,30 @@ import { Link } from 'react-router-dom';
 
 function Shopping({ isOpen, closeModal }) {
     const [total, setTotal] = useState(0)
+
     let productsSelect = localStorage.getItem('productsSelected')?.split(";")
     const listProducts = localStorage.getItem('allProducts')
     let productsObj = JSON.parse(listProducts)?.filter(objeto => productsSelect?.includes(objeto.id));
 
     const getTotalValue = () => {
-        console.log(productsObj)
-        if (productsObj.length > 0) {
-            const value = productsObj?.reduce(prod => {
-                console.log(prod)
-                return prod.precio
-            })
-            setTotal(value)
+        let productsSeleted = localStorage.getItem('productsSelected')?.split(";")
+        let products = []
+        for (const prd of productsSeleted ) {
+            for (const prdList of JSON.parse(listProducts) ) {
+                if (parseInt(prdList.id) === parseInt(prd)) {
+                    products.push(prdList.precio)
+                }
+            }
+        }
+        console.log(products)
+        if (products.length > 0) {
+            let value = 0
+            for (const prd of products) {
+                const price = prd;
+                value += price;
+            }
+            console.log(value.toFixed(2))
+            setTotal(value.toFixed(2))
         } else {
             setTotal(0)
         }
@@ -44,6 +56,7 @@ function Shopping({ isOpen, closeModal }) {
                             price={product.precio}
                             id={product.id}
                             img={product.img}
+                            getTotalValue={() => getTotalValue()}
                             quantity={productsSelect.filter(item => parseInt(item) === parseInt(product.id)).length}
                         />
                     )
