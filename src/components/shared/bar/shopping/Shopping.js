@@ -8,26 +8,33 @@ function Shopping({ isOpen, closeModal }) {
 
     let productsSelect = localStorage.getItem('productsSelected')?.split(";")
     const listProducts = localStorage.getItem('allProducts')
-    let productsObj = JSON.parse(listProducts)?.filter(objeto => productsSelect?.includes(objeto.id));
+    let productsObj
+    if (productsSelect?.length > 0) {
+        productsObj = JSON.parse(listProducts)?.filter(objeto => productsSelect?.includes(objeto.id));
+    }
 
     const getTotalValue = () => {
         let productsSeleted = localStorage.getItem('productsSelected')?.split(";")
-        let products = []
-        for (const prd of productsSeleted ) {
-            for (const prdList of JSON.parse(listProducts) ) {
-                if (parseInt(prdList.id) === parseInt(prd)) {
-                    products.push(prdList.precio)
+        if (productsSeleted.length > 0) {
+            let products = []
+            for (const prd of productsSeleted) {
+                for (const prdList of JSON.parse(listProducts)) {
+                    if (parseInt(prdList.id) === parseInt(prd)) {
+                        products.push(prdList.precio)
+                    }
                 }
             }
-        }
-        if (products.length > 0) {
-            let value = 0
-            for (const prd of products) {
-                const price = prd;
-                value += price;
+            if (products.length > 0) {
+                let value = 0
+                for (const prd of products) {
+                    const price = prd;
+                    value += price;
+                }
+                setTotal(value.toFixed(2))
+            } else {
+                setTotal(0)
             }
-            setTotal(value.toFixed(2))
-        } else {
+        } else{
             setTotal(0)
         }
     }
