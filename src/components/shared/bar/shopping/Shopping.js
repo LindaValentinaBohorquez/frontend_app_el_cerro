@@ -20,14 +20,12 @@ function Shopping({ isOpen, closeModal }) {
                 }
             }
         }
-        console.log(products)
         if (products.length > 0) {
             let value = 0
             for (const prd of products) {
                 const price = prd;
                 value += price;
             }
-            console.log(value.toFixed(2))
             setTotal(value.toFixed(2))
         } else {
             setTotal(0)
