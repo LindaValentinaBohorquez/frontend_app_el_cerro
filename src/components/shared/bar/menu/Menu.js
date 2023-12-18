@@ -5,7 +5,7 @@ function Menu() {
         <div className="menu">
             <nav className="menu-navbar">
                 <ul className="menu-items">
-                    <li><a href="/products"> Carnes rojas / blancas / de mar </a></li>
+                    <li><a href="/products-meats"> Carnes rojas / blancas / de mar </a></li>
                     <li><a href="/products"> Verduras / frutas / vegetales </a></li>
                     <li><a href="/products"> Huevos, lácteos y derivados </a></li>
                     <li><a href="/products"> Despensa </a></li>

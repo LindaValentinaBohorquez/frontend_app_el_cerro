@@ -11,6 +11,7 @@ import Step3 from './components/payment/step3/Step3';
 import Payment from './components/payment/Payment';
 import SectionCards from './components/landing/section_cards/SectionCards';
 import { Toaster} from 'sonner';
+import ProductsCarnes from './components/list_products/list}_products_cat/ProductsCarnes';
 
 function App() {
   const data = [
@@ -218,6 +219,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/products" element={<ListProducts />} />
+        <Route path="/products-meats" element={<ProductsCarnes />} />
         <Route
           path="/SectionCards"
           element={<SectionCards redirectToProducts={redirectToProducts} />}
