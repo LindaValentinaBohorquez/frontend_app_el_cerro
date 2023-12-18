@@ -1,3 +1,4 @@
+import { toast } from "sonner";
 import "./CardProduct.css"
 function CardProduct({name, description, price, id, url}) {
 
@@ -9,6 +10,7 @@ function CardProduct({name, description, price, id, url}) {
         else{
             localStorage.setItem('productsSelected',value +";"+id)
         }
+        toast.success("Se ha agregado el producto.")
     }
 
     return (

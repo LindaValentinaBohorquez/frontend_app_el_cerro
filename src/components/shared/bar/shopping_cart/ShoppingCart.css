@@ -10,6 +10,7 @@
     width: 35px;
     height: auto;
     margin-right: 5px;
+    cursor: pointer;
 }
 
 .shopping-cart-item-count {
