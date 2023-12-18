@@ -1,15 +1,32 @@
+import { useEffect, useState } from "react";
 import "./Shopping.css"
 import ShoppingItem from "./shopping_item/ShoppingItem";
 import { Link } from 'react-router-dom';
 
 function Shopping({ isOpen, closeModal }) {
-    if (!isOpen) return null;
+    const [total, setTotal] = useState(0)
     let productsSelect = localStorage.getItem('productsSelected')?.split(";")
     const listProducts = localStorage.getItem('allProducts')
-    let productsObj
-    if (productsSelect?.length >= 0) {
-        productsObj = JSON.parse(listProducts).filter(objeto => productsSelect.includes(objeto.id));
+    let productsObj = JSON.parse(listProducts)?.filter(objeto => productsSelect?.includes(objeto.id));
+
+    const getTotalValue = () => {
+        console.log(productsObj)
+        if (productsObj.length > 0) {
+            const value = productsObj?.reduce(prod => {
+                console.log(prod)
+                return prod.precio
+            })
+            setTotal(value)
+        } else {
+            setTotal(0)
+        }
     }
+
+    useEffect(() => {
+        getTotalValue()
+    })
+
+    if (!isOpen) return null;
 
     return (
         <div className="modal">
@@ -34,7 +51,7 @@ function Shopping({ isOpen, closeModal }) {
                 <div className="shopping-content">
                     <div className="shopping-total">
                         <p>Total</p>
-                        <p>$200</p>
+                        <p>${total}</p>
                     </div>
                     <Link to="/payment/step1" className="shopping-link">
                         <button onClick={() => closeModal()}>Ir a pagar</button>

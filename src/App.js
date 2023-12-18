@@ -10,11 +10,10 @@ import Step2 from './components/payment/step2/Step2';
 import Step3 from './components/payment/step3/Step3';
 import Payment from './components/payment/Payment';
 import SectionCards from './components/landing/section_cards/SectionCards';
-import useFetch from './hooks/useFetchData';
-import { Toaster, toast } from 'sonner';
+import { Toaster} from 'sonner';
 
 function App() {
-  /*const data = [
+  const data = [
     {
       cantidad: 20,
       descripcion: "Para desinfección y limpieza.",
@@ -22,7 +21,7 @@ function App() {
       nombre: "Cloro",
       precio: 2.1,
       tipo: "Aseo Hogar",
-      url: "https://i.postimg.cc/cCgv6hwg/1.png"
+      img: "https://i.postimg.cc/cCgv6hwg/1.png"
     },
     {
       cantidad: 20,
@@ -31,7 +30,7 @@ function App() {
       nombre: "Pollo",
       precio: 16.700,
       tipo: "Carne Blanca",
-      url: "https://i.postimg.cc/8CZcH9bf/2.png"
+      img: "https://i.postimg.cc/8CZcH9bf/2.png"
     },
     {
       cantidad: 50,
@@ -40,7 +39,7 @@ function App() {
       nombre: "Doritos",
       precio: 4.600,
       tipo: "Paquetes",
-      url: "https://i.postimg.cc/HnyLTx1b/3.png"
+      img: "https://i.postimg.cc/HnyLTx1b/3.png"
     },
     {
       cantidad: 65,
@@ -49,7 +48,7 @@ function App() {
       nombre: "Manzana Verde",
       precio: 2.680,
       tipo: "Frutas",
-      url: "https://i.postimg.cc/9XrJHqzs/4.png"
+      img: "https://i.postimg.cc/9XrJHqzs/4.png"
     },
     {
       cantidad: 30,
@@ -58,7 +57,7 @@ function App() {
       nombre: "Tomate",
       precio: 1.200,
       tipo: "Verdura",
-      url: "https://i.postimg.cc/xjhgfTz8/5.png"
+      img: "https://i.postimg.cc/xjhgfTz8/5.png"
     },
     {
       cantidad: 102,
@@ -67,7 +66,7 @@ function App() {
       nombre: "Azúcar",
       precio: 10.490,
       tipo: "Despensa",
-      url: "https://i.postimg.cc/xTm5cDvR/6.png"
+      img: "https://i.postimg.cc/xTm5cDvR/6.png"
     },
     {
       cantidad: 80,
@@ -76,7 +75,7 @@ function App() {
       nombre: "Huevos",
       precio: 17.990,
       tipo: "Despensa",
-      url: "https://i.postimg.cc/g2PDhS4P/7.png"
+      img: "https://i.postimg.cc/g2PDhS4P/7.png"
     },
     {
       cantidad: 120,
@@ -85,7 +84,7 @@ function App() {
       nombre: "Atún",
       precio: 4.990,
       tipo: "Despensa",
-      url: "https://i.postimg.cc/y8XTymr3/8.png"
+      img: "https://i.postimg.cc/y8XTymr3/8.png"
     },
     {
       cantidad: 50,
@@ -94,7 +93,7 @@ function App() {
       nombre: "Pan Tajado",
       precio: 7.200,
       tipo: "Panadería",
-      url: "https://i.postimg.cc/XvjkHrTH/9.png"
+      img: "https://i.postimg.cc/XvjkHrTH/9.png"
     },
     {
       cantidad: 100,
@@ -103,7 +102,7 @@ function App() {
       nombre: "Bon Bon Bum",
       precio: 7.490,
       tipo: "Confitería",
-      url: "https://i.postimg.cc/yY0h7hKp/10.png"
+      img: "https://i.postimg.cc/yY0h7hKp/10.png"
     },
     {
       cantidad: 46,
@@ -112,7 +111,7 @@ function App() {
       nombre: "Jabón Líquido",
       precio: 13.600,
       tipo: "Aseo Personal",
-      url: "https://i.postimg.cc/cLZRCK4x/11.png"
+      img: "https://i.postimg.cc/cLZRCK4x/11.png"
     },
     {
       cantidad: 20,
@@ -121,7 +120,7 @@ function App() {
       nombre: "Tortillas",
       precio: 12.990,
       tipo: "Panadería",
-      url: "https://i.postimg.cc/FHZjL97j/12.png"
+      img: "https://i.postimg.cc/FHZjL97j/12.png"
     },
     {
       cantidad: 30,
@@ -130,7 +129,7 @@ function App() {
       nombre: "Shampoo",
       precio: 12.990,
       tipo: "Aseo Personal",
-      url: "https://i.postimg.cc/W4Yg5Xmz/13.png"
+      img: "https://i.postimg.cc/W4Yg5Xmz/13.png"
     },
     {
       cantidad: 18,
@@ -139,7 +138,7 @@ function App() {
       nombre: "Pescado",
       precio: 17.990,
       tipo: "Carne De Mar",
-      url: "https://i.postimg.cc/DfXLcQSf/14.png"
+      img: "https://i.postimg.cc/DfXLcQSf/14.png"
     },
     {
       cantidad: 20,
@@ -148,7 +147,7 @@ function App() {
       nombre: "Carne",
       precio: 17.990,
       tipo: "Carne Roja",
-      url: "https://i.postimg.cc/HkByLBhz/15.png"
+      img: "https://i.postimg.cc/HkByLBhz/15.png"
     },
     {
       cantidad: 60,
@@ -157,7 +156,7 @@ function App() {
       nombre: "Detergente Para Ropa",
       precio: 10.990,
       tipo: "Aseo Hogar",
-      url: "https://i.postimg.cc/GptsTv0C/16.png"
+      img: "https://i.postimg.cc/GptsTv0C/16.png"
     },
     {
       cantidad: 16,
@@ -166,7 +165,7 @@ function App() {
       nombre: "Suavizante Para Ropa",
       precio: 8.799,
       tipo: "Aseo Hogar",
-      url: "https://i.postimg.cc/0jR643zk/17.png"
+      img: "https://i.postimg.cc/0jR643zk/17.png"
     },
     {
       cantidad: 20,
@@ -175,7 +174,7 @@ function App() {
       nombre: "Leche",
       precio: 2.899,
       tipo: "Lácteo",
-      url: "https://i.postimg.cc/zXkLdx8N/18.png"
+      img: "https://i.postimg.cc/zXkLdx8N/18.png"
     },
     {
       cantidad: 80,
@@ -184,16 +183,16 @@ function App() {
       nombre: "Coca-Cola",
       precio: 9.500,
       tipo: "Gaseosa",
-      url: "https://i.postimg.cc/0y2zh7yw/19.png"
+      img: "https://i.postimg.cc/0y2zh7yw/19.png"
     }
   ]
-  localStorage.setItem('allProducts', JSON.stringify(data));*/
+  localStorage.setItem('allProducts', JSON.stringify(data));
 
-  const { data: products, error } = useFetch("http://localhost:40571/AppElCerro/resources/producto/productos");
+ /* const { data: products, error } = useFetch("http://localhost:40571/AppElCerro/resources/producto/productos");
   if (error != null) {
     toast.error(error);
   }
-  localStorage.setItem('allProducts', JSON.stringify(products));
+  localStorage.setItem('allProducts', JSON.stringify(products));*/
 
   const navigate = useNavigate();
 
