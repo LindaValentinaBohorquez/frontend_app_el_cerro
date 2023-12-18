@@ -15,7 +15,7 @@ function Shopping({ isOpen, closeModal }) {
 
     const getTotalValue = () => {
         let productsSeleted = localStorage.getItem('productsSelected')?.split(";")
-        if (productsSeleted.length > 0) {
+        if (productsSeleted?.length > 0) {
             let products = []
             for (const prd of productsSeleted) {
                 for (const prdList of JSON.parse(listProducts)) {
@@ -24,7 +24,7 @@ function Shopping({ isOpen, closeModal }) {
                     }
                 }
             }
-            if (products.length > 0) {
+            if (products?.length > 0) {
                 let value = 0
                 for (const prd of products) {
                     const price = prd;

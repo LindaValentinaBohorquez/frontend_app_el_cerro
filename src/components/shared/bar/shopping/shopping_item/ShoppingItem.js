@@ -5,7 +5,7 @@ function ShoppingItem({ name, description, price, id, img, quantity, getTotalVal
     const [quantityProduct, setQuantityProduct] = useState(quantity);
     const plus = () => {
         const value = localStorage.getItem('productsSelected');
-        if(value == null){
+        if(value == null || value?.length === 0){
             localStorage.setItem('productsSelected',id)
         }
         else{
@@ -20,6 +20,7 @@ function ShoppingItem({ name, description, price, id, img, quantity, getTotalVal
         } else {
             const value = localStorage.getItem('productsSelected')?.split(";");
             let listProducts = deleteCoincidenci(value,id)
+            console.log(listProducts)
             localStorage.setItem('productsSelected',listProducts.join(";"))
             setQuantityProduct(quantityProduct - 1)
         }

@@ -4,7 +4,7 @@ import "./CardProduct.css"
 function CardProduct({name, description, price, id, img}) {
     const onClick =() =>{
         const value = localStorage.getItem('productsSelected');
-        if(value == null){
+        if(value == null || value?.length === 0){
             localStorage.setItem('productsSelected',id)
         }
         else{
