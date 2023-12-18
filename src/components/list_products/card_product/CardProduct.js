@@ -1,7 +1,7 @@
 import { toast } from "sonner";
 import "./CardProduct.css"
-function CardProduct({name, description, price, id, url}) {
 
+function CardProduct({name, description, price, id, img}) {
     const onClick =() =>{
         const value = localStorage.getItem('productsSelected');
         if(value == null){
@@ -16,7 +16,7 @@ function CardProduct({name, description, price, id, url}) {
     return (
         <div className="card-Product-card">
             <div className="body-card-product">
-                <img src={url} alt="muestra"></img>
+                <img src={img} alt="muestra"></img>
             </div>
             <div className="title">{name}</div>
             <div className="description">{description}</div>

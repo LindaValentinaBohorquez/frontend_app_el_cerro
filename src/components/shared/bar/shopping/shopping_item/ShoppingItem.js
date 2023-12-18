@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./ShoppingItem.css"
 
-function ShoppingItem({ name, description, price, id, url, quantity }) {
+function ShoppingItem({ name, description, price, id, img, quantity }) {
     const [quantityProduct, setQuantityProduct] = useState(quantity);
     const plus = () => {
         const value = localStorage.getItem('productsSelected');
@@ -35,7 +35,7 @@ function ShoppingItem({ name, description, price, id, url, quantity }) {
     return (
         <div className="shopping-item">
             <div className="shopping-item-url">
-                <img src={url} alt={description}></img>
+                <img src={img} alt={description}></img>
             </div>
             <div>
                 <div className="shopping-item-name">

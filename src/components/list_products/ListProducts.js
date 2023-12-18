@@ -21,7 +21,7 @@ function ListProducts() {
                             description={product.descripcion}
                             price={product.precio}
                             id={product.id} 
-                            url={product.img}
+                            img={product.img}
                         />
                     )
                 })}

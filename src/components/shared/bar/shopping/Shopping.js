@@ -43,7 +43,7 @@ function Shopping({ isOpen, closeModal }) {
                             description={product.descripcion}
                             price={product.precio}
                             id={product.id}
-                            url={product.img}
+                            img={product.img}
                             quantity={productsSelect.filter(item => parseInt(item) === parseInt(product.id)).length}
                         />
                     )
