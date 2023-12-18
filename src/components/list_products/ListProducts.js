@@ -2,7 +2,7 @@ import CardProduct from "./card_product/CardProduct";
 import "./ListProducts.css"
 
 function ListProducts() {
-    const products =  JSON.parse(localStorage.getItem('allProducts'))
+    const products =  JSON.parse(localStorage.getItem('searchProducts'))
 
     return (
         <div className="list-products-title">
