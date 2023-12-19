@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css';
 import Bar from './components/shared/bar/Bar';
 import Footer from './components/shared/footer/Footer';
 import { Route, Routes } from 'react-router-dom';
@@ -13,12 +14,11 @@ import { Toaster, toast } from 'sonner';
 import useFetch from './hooks/useFetchData';
 
 function App() {
-  const { data: products, error } = useFetch("http://localhost:8080/AppElCerro/resources/producto/productos");
+  const { data: products, error } = useFetch("http://localhost:40571/AppElCerro/resources/producto/productos");
   if (error != null) {
     toast.error(error);
   }
-
-  localStorage.setItem('allProducts', JSON.stringify(products));
+  localStorage.setItem('allProducts', JSON.stringify(data));
 
   return (
     <div className="App">
