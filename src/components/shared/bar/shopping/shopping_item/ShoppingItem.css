@@ -6,26 +6,36 @@
 }
 
 .shopping-item-url img {
-    width: 100px;
-    height: 80px;
-    padding-left: 50px;
+    width: 90px;
+    height: 70px;
+    padding-left: 20px;
     padding-top: 10px;
     padding-bottom: 10px;
+    border-radius: 40%;
 }
 
-.shopping-item-edit{
+.shopping-item-name {
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.shopping-item-price {
+    margin-left: 10px;
+}
+
+.shopping-item-edit {
     display: flex;
     width: 100px;
     height: 10px;
     justify-content: space-around;
 }
 
-.shopping-item-button-trash img{
+.shopping-item-button-trash img {
     width: 10px;
     height: 10px;
 }
 
-.shopping-item-button-plus img{
+.shopping-item-button-plus img {
     width: 10px;
     height: 10px;
 }
