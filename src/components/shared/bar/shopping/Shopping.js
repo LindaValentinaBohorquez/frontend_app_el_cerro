@@ -72,8 +72,8 @@ function Shopping({ isOpen, closeModal }) {
                 }
                 <div className="shopping-content">
                     <div className="shopping-total">
-                        <p>Total</p>
-                        <p>${total}</p>
+                        <p><strong>Sub total</strong></p>
+                        <p><strong>${total}</strong></p>
                     </div>
                     <Link to="/payment/step1" className="shopping-link">
                         <button onClick={() => closeModal()}>Ir a pagar</button>
