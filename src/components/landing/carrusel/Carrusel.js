@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Carrusel.css';
 
 function Carrusel() {
@@ -14,27 +15,27 @@ function Carrusel() {
 
   return (
     <div className="slider-container">
-      <a href="/">
+      <Link to="/productsDiscount" className="slide-link">
         <img
           src="https://i.postimg.cc/4dDgQRm5/1.png"
           alt="img 1"
           className={currentSlide === 0 ? "slide showing" : "slide"}
         />
-      </a>
-      <a href="/">
+      </Link>
+      <Link to="/productsDiscount" className="slide-link">
         <img
           src="https://i.postimg.cc/kXFmKZ9Q/2.png"
           alt="img 2"
           className={currentSlide === 1 ? "slide showing" : "slide"}
         />
-      </a>
-      <a href="/">
+      </Link>
+      <Link to="/products/AseoPersonal" className="slide-link">
         <img
           src="https://i.postimg.cc/zX5mzjWV/3.png"
           alt="img 3"
           className={currentSlide === 2 ? "slide showing" : "slide"}
         />
-      </a>
+      </Link>
       <div className="buttons">
         <button className="controls" onClick={previousSlide}>
           &lt;
