@@ -18,7 +18,7 @@ function Search() {
             return nameMatch || descriptionMatch;
         });
 
-        localStorage.setItem('searchProducts', JSON.stringify(results));
+        results && localStorage.setItem('searchProducts', JSON.stringify(results));
         navigate('/products');
     }
 

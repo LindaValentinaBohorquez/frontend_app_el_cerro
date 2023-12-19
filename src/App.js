@@ -18,13 +18,13 @@ function App() {
   if (error != null) {
     toast.error(error);
   }
-  localStorage.setItem('allProducts', JSON.stringify(products));
+  products && localStorage.setItem('allProducts', JSON.stringify(products));
 
   return (
     <div className="App">
       {loading ?
         <div>
-          Loading ...
+          {loading}
         </div>
         :
         <div>

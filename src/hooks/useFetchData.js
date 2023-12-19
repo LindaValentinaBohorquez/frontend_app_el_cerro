@@ -10,8 +10,7 @@ function useFetch(url) {
         setLoading('Cargando...')
         setData(null);
         setError(null);
-        const source = axios.CancelToken.source();
-        axios.get(url, { cancelToken: source.token })
+        axios.get(url)
             .then(res => {
                 setLoading(false);
                 res.data && setData(res.data);
@@ -21,9 +20,6 @@ function useFetch(url) {
                 setLoading(false)
                 setError('Un error ha ocurrido...')
             })
-        return () => {
-            source.cancel();
-        }
     }, [url])
 
     return { data, loading, error }
