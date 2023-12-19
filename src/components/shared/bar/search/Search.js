@@ -10,7 +10,6 @@ function Search() {
         setInputValue(event.target.value);
     };
 
-
     function searchByString() {
         const listProducts = JSON.parse(localStorage.getItem('allProducts'))
         const results = listProducts?.filter(object => {
