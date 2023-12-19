@@ -30,12 +30,26 @@
     justify-content: space-around;
 }
 
+.shopping-item-button-trash button{
+    background-color: transparent;
+    border: transparent;
+}
+
+.shopping-item-button-plus button{
+    background-color: transparent;
+    border: transparent;
+}
+
 .shopping-item-button-trash img {
-    width: 10px;
-    height: 10px;
+    cursor: pointer;
+    width: 15px;
+    height: 15px;
 }
 
 .shopping-item-button-plus img {
-    width: 10px;
-    height: 10px;
+    cursor: pointer;
+    background-color: transparent;
+    border: transparent;
+    width: 15px;
+    height: 15px;
 }
