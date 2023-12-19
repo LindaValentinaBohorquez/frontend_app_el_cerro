@@ -26,7 +26,7 @@ function Search() {
     return (
         <div className="search">
             <form onSubmit={() => searchByString()}>
-                <input type="text" placeholder="🔍︎ Buscar Producto..." value={inputValue} onChange={handleInputChange}></input>
+                <input type="text" placeholder="🔍︎ Buscar Producto ..." value={inputValue} onChange={handleInputChange}></input>
                 <button onClick={() => searchByString()}><img src="https://i.postimg.cc/MHh7wH9S/lupa1.png" alt="lupa de busqueda"></img></button>
             </form>
         </div>
