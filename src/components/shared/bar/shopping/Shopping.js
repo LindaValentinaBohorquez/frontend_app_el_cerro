@@ -34,7 +34,7 @@ function Shopping({ isOpen, closeModal }) {
             } else {
                 setTotal(0)
             }
-        } else{
+        } else {
             setTotal(0)
         }
     }
@@ -48,24 +48,28 @@ function Shopping({ isOpen, closeModal }) {
     return (
         <div className="modal">
             <div className="modal-container">
-                <h1>Tu Carrito</h1>
                 <button className="close" onClick={() => closeModal()}>X</button>
+                <h1>Tu Carrito</h1>
                 {!productsSelect || productsSelect[0] === '' ? <h1>
                     No se han seleccionado productos
-                </h1> : productsObj.map(product => {
-                    return (
-                        <ShoppingItem
-                            key={product.id}
-                            name={product.nombre}
-                            description={product.descripcion}
-                            price={product.precio}
-                            id={product.id}
-                            img={product.img}
-                            getTotalValue={() => getTotalValue()}
-                            quantity={productsSelect.filter(item => parseInt(item) === parseInt(product.id)).length}
-                        />
-                    )
-                })}
+                </h1> :
+                    <div>
+                        {productsObj.map(product => {
+                            return (
+                                <ShoppingItem
+                                    key={product.id}
+                                    name={product.nombre}
+                                    description={product.descripcion}
+                                    price={product.precio}
+                                    id={product.id}
+                                    img={product.img}
+                                    getTotalValue={() => getTotalValue()}
+                                    quantity={productsSelect.filter(item => parseInt(item) === parseInt(product.id)).length}
+                                />
+                            )
+                        })}
+                    </div>
+                }
                 <div className="shopping-content">
                     <div className="shopping-total">
                         <p>Total</p>
