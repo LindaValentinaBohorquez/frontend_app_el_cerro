@@ -71,7 +71,7 @@ const Step1 = () => {
                 <span className="arrow">→</span>
                 <img src="https://i.postimg.cc/YSrpHTcN/mano.png" alt="Mano" />
             </div>
-            <div>
+            <div className="step1-list-products">
                 <h2>Lista de compras</h2>
                 <div className="step1-title1">
                     <div>
@@ -91,9 +91,9 @@ const Step1 = () => {
                         })}
                     </div>
                     <div className="total-and-button">
-                        <p>Total: ${" " + new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(
+                        <h2>Total: ${" " + new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(
                             total,
-                        )}</p>
+                        )}</h2>
                         <button onClick={handleNextClick} className="next-step-button">Continuar con la compra</button>
                     </div>
                 </div>

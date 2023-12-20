@@ -1,6 +1,6 @@
 .step1-title {
     font-family: 'Sorts Mill Goudy', serif; 
-    margin-left: 30px;
+    margin-left: 60px;
     font-size: 12px; 
     color: #575757; 
 }
@@ -59,18 +59,18 @@
     justify-content: space-between;
 }
 
+.step1-list-products {
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+
 .total-and-button {
-    display: flex;
-    justify-content: space-between;
+    padding-left: 20px;
 }
 
 .next-step-button { 
-    font-size: 20px; 
     font-weight: bold;
-    margin-left: 50px;
-    margin-right: 100px;
     border-radius: 10px;
-    padding: 20px 30px; 
     background: #AB8742;
 }
 
