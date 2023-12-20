@@ -19,6 +19,10 @@
     color: #0c0c0c;
 }
 
+.step1-title1 {
+    display: flex;
+}
+
 .icons {
     display: flex;
     justify-content: center;

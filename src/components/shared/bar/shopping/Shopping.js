@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 
 function Shopping({ isOpen, closeModal }) {
     const [total, setTotal] = useState(0)
-
     let productsSelect = localStorage.getItem('productsSelected')?.split(";")
     const listProducts = localStorage.getItem('allProducts')
     let productsObj
