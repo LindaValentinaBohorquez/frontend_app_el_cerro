@@ -10,9 +10,9 @@ function ListProductsDiscount() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        let apiUrl = 'http://localhost:40571/AppElCerro-master/resources/detallexpromo/detallesxpromos';
+        let apiUrl = 'http://localhost:40571/AppElCerro/resources/detallexpromo/detallesxpromos';
         if (tipo) {
-          apiUrl = `http://localhost:40571/AppElCerro-master/resources/detallexpromo/detallesxpromos/${tipo}`;
+          apiUrl = `http://localhost:40571/AppElCerro/resources/detallexpromo/detallesxpromos/${tipo}`;
         }
 
         const response = await fetch(apiUrl);
@@ -37,7 +37,7 @@ function ListProductsDiscount() {
         <h2>Listado de productos con descuento</h2>
       </div>
       <div className="list-grid">
-        {data.map(productDiscount => (
+        {data && data?.map(productDiscount => (
           <CardProduct
             key={productDiscount.id_producto}
             name={productDiscount.nombre_producto}
