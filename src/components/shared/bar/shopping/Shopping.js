@@ -50,9 +50,9 @@ function Shopping({ isOpen, closeModal }) {
             <div className="modal-container">
                 <button className="close" onClick={() => closeModal()}>X</button>
                 <h1>Tu Carrito</h1>
-                {!productsSelect || productsSelect[0] === '' ? <h1>
+                {!productsSelect || productsSelect[0] === '' ? <div className="modal-container-zero"><h4>
                     No se han seleccionado productos
-                </h1> :
+                </h4></div> :
                     <div>
                         {productsObj.map(product => {
                             return (
