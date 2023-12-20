@@ -1,6 +1,7 @@
 
 *{
     box-sizing: border-box;
+    font-family: 'Sorts Mill Goudy', serif;
 }
 body {
     display: flex;

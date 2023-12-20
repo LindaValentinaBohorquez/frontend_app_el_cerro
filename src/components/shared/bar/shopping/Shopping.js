@@ -43,6 +43,11 @@ function Shopping({ isOpen, closeModal }) {
         getTotalValue()
     })
 
+    const goToPayment = () => {
+        closeModal();
+        localStorage.setItem("Total", total)
+    }
+
     if (!isOpen) return null;
 
     return (
@@ -78,7 +83,7 @@ function Shopping({ isOpen, closeModal }) {
                         )}</strong></p>
                     </div>
                     <Link to="/payment/step1" className="shopping-link">
-                        <button onClick={() => closeModal()}><strong>Ir a pagar</strong></button>
+                        <button onClick={() => goToPayment() }><strong>Ir a pagar</strong></button>
                     </Link>
                 </div>
             </div>

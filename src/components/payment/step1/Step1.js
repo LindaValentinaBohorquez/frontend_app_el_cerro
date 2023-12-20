@@ -36,6 +36,9 @@ const Step1 = () => {
             </div>
             <div className="step1-title1">
                 <h2>Lista de compras</h2>
+                <div>
+                    
+                </div>
             </div>
             <div className="total-and-button">
                 <p>Total: ${Total}</p>
