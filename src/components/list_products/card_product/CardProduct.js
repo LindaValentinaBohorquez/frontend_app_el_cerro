@@ -20,7 +20,9 @@ function CardProduct({name, description, price, id, img}) {
             </div>
             <div className="title">{name}</div>
             <div className="description">{description}</div>
-            <div className="price">$ {price}</div>
+            <div className="price">${" " + new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(
+                        price,
+                    )}</div>
             <div className="foot">
                 <button onClick={() =>onClick()}>Agregar</button>
             </div>

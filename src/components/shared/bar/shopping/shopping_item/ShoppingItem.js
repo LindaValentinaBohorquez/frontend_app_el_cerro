@@ -5,11 +5,11 @@ function ShoppingItem({ name, description, price, id, img, quantity, getTotalVal
     const [quantityProduct, setQuantityProduct] = useState(quantity);
     const plus = () => {
         const value = localStorage.getItem('productsSelected');
-        if(value == null || value?.length === 0){
-            localStorage.setItem('productsSelected',id)
+        if (value == null || value?.length === 0) {
+            localStorage.setItem('productsSelected', id)
         }
-        else{
-            localStorage.setItem('productsSelected',value +";"+id)
+        else {
+            localStorage.setItem('productsSelected', value + ";" + id)
         }
         setQuantityProduct(quantityProduct + 1)
         getTotalValue()
@@ -19,9 +19,9 @@ function ShoppingItem({ name, description, price, id, img, quantity, getTotalVal
             console.log("esto se debe eliminar del carrito")
         } else {
             const value = localStorage.getItem('productsSelected')?.split(";");
-            let listProducts = deleteCoincidenci(value,id)
+            let listProducts = deleteCoincidenci(value, id)
             console.log(listProducts)
-            localStorage.setItem('productsSelected',listProducts.join(";"))
+            localStorage.setItem('productsSelected', listProducts.join(";"))
             setQuantityProduct(quantityProduct - 1)
         }
         getTotalValue()
@@ -33,8 +33,8 @@ function ShoppingItem({ name, description, price, id, img, quantity, getTotalVal
             arrayClonado.splice(index, 1);
         }
         return arrayClonado;
-      }
-      
+    }
+
     return (
         <div className="shopping-item">
             <div className="shopping-item-url">
@@ -45,7 +45,9 @@ function ShoppingItem({ name, description, price, id, img, quantity, getTotalVal
                     {name}
                 </div>
                 <div className="shopping-item-price">
-                    {price}
+                    ${" " + new Intl.NumberFormat('en-IN', { maximumSignificantDigits: 3 }).format(
+                        price,
+                    )}
                 </div>
                 <div className="shopping-item-edit">
                     <div className="shopping-item-button-trash">
