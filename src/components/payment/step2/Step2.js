@@ -37,7 +37,7 @@ const Step2 = ({ formData, handleNextStep }) => {
             <div className="icons">
                 <img src="https://i.postimg.cc/fRym7QLT/carrito-de-compras.png" alt="Carrito" />
                 <span className="arrow">→</span>
-                <button onClick={handleIconClick} className="icon-button">
+                <button onClick={() => handleIconClick()} className="icon-button">
                     <div className="icon-background">
                         <img src="https://i.postimg.cc/qRxWQvD2/usuario.png" alt="Usuario" />
                     </div>
@@ -77,7 +77,7 @@ const Step2 = ({ formData, handleNextStep }) => {
                         </label>
                     </div>
                 </div>
-                <button onClick={handleNextClick}className="next-step-button">Siguiente paso</button>
+                <button onClick={() => handleNextClick()}className="next-step-button">Siguiente paso</button>
             </div>
 
         </div>
