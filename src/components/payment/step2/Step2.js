@@ -294,10 +294,7 @@ const Step2 = ({ formData, handleNextStep }) => {
     return (
         <div className="step2-title">
             <div className="step2-title">
-                <h2>Inicio &gt; Proceso de pago &gt; <span style={{ backgroundColor: 'white', color: 'black' }}>Step2</span></h2>
-            </div>
-            <div className="step2-title2">
-                <h2>Información Personal </h2>
+                <h2>Inicio &gt; Proceso de pago &gt; <span style={{ backgroundColor: 'white', color: 'black' }}>Información personal</span></h2>
             </div>
             <div className="icons">
                 <img src="https://i.postimg.cc/fRym7QLT/carrito-de-compras.png" alt="Carrito" />
