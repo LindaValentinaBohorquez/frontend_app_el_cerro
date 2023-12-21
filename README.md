@@ -1,70 +1,102 @@
-# Getting Started with Create React App
+# Frontend App El Cerro
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este repositorio contiene el código fuente para la aplicación frontend de la página web dedicada al supermercado "El Cerro". La aplicación está construida en React y utiliza una serie de paquetes y bibliotecas. A continuación, se detallan las instrucciones para la instalación y ejecución.
 
-## Available Scripts
+## Dependencias
 
-In the project directory, you can run:
+Asegúrate de tener instaladas las siguientes dependencias antes de ejecutar la aplicación:
 
-### `npm start`
+- **@fortawesome/fontawesome-free**: Conjunto de iconos y fuentes.
+- **@testing-library/jest-dom**: Utilizado para pruebas en Jest.
+- **@testing-library/react**: Utilizado para pruebas en React.
+- **@testing-library/user-event**: Librería para simular eventos del usuario en pruebas.
+- **axios**: Cliente HTTP para realizar peticiones a un servidor.
+- **bootstrap**: Framework de diseño y estilos.
+- **react**: Biblioteca principal para construir interfaces de usuario.
+- **react-dom**: Renderizador de React para la web.
+- **react-router-dom**: Enrutador para aplicaciones React.
+- **react-scripts**: Scripts y configuraciones para proyectos React.
+- **react-spring**: Biblioteca para animaciones en React.
+- **sonner**: Dependencia específica no identificada (puede referirse a alguna biblioteca o módulo personalizado).
+- **web-vitals**: Herramientas para medir el rendimiento web.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Estructura del Proyecto
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+src/
+|-- components/
+|   |-- landing/
+|   |   |-- carrusel/
+|   |   |   |-- Carrusel.css
+|   |   |   |-- Carrusel.js
+|   |   |-- Landing.css
+|   |   |-- Landing.js
+|   |   |-- section_card/
+|   |       |-- SectionCard.css
+|   |       |-- SectionCard.js
+|   |-- list_products/
+|   |   |-- card_discount/
+|   |   |   |-- CardDiscount.css
+|   |   |   |-- CardDiscount.js
+|   |   |-- card_product/
+|   |       |-- CardProduct.css
+|   |       |-- CardProduct.js
+|   |   |-- (Espacio para Mafer)
+|   |-- payment/
+|   |   |-- (Espacio para Mafer)
+|   |-- shared/
+|       |-- bar/
+|       |   |-- Bar.css
+|       |   |-- Bar.js
+|       |-- footer/
+|           |-- Footer.css
+|           |-- Footer.js
+```
 
-### `npm test`
+## Componentes Principales
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Landing:**
+   - Contiene los componentes `Carrusel` y `SectionCard`.
+   - `Carrusel` realiza un slide de 3 imágenes que redirigen a las promociones.
+   - `SectionCard` muestra las cards de promociones que también redirigen a las promociones.
 
-### `npm run build`
+2. **List Products:**
+   - Contiene `CardDiscount` y `CardProduct`.
+   - `CardDiscount` Determina el producto con el descuento, con la funcionalidad de agregar el producto
+   - `CardProduct` Agrega el producto al carrito, tomando la información del producto a travez de la componente props
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. **Payment:**
+   - Contiene los steps del proceso de pago.
+   - `Step1`  Toma la lista de productos de Shopping, calcula y muestra el total de la compra, permitiendo la navegacion entre diferentes pasos
+   - `Step2` Recopila y procesa la información personal del usuario, realiza operaciones en el servidor relacionadas con el usuario y el carrito de compras
+   - `Step3` Proporciona al usuario un resumen del costo total de la compra, tomando las consultas del carrito para realizar las operaciones pertinentes
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+4. **Shared:**
+   - **Bar:**
+     - Contiene el logo de "El Cerro", menú de categorización, buscador de productos y carrito de compras.
+     - El carrito de compras muestra los productos seleccionados y permite añadir o eliminar productos.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+   - **Footer:**
+     - Proporciona enlaces e información sobre el supermercado "El Cerro".
 
-### `npm run eject`
+## Ejecutar la Aplicación
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Asegúrate de tener Node.js y npm instalados. Luego, ejecuta los siguientes comandos:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+# Instala las dependencias
+npm install
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+# Inicia la aplicación
+npm start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+La aplicación estará disponible en [http://localhost:3000](http://localhost:3000).
 
-## Learn More
+## Contribuciones
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Las contribuciones son bienvenidas. Siéntete libre de mejorar este proyecto. ¡Gracias por tu colaboración!
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Licencia
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Este proyecto está bajo la licencia [MIT](LICENSE).
