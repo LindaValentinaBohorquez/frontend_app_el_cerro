@@ -5,9 +5,16 @@ import useFetch from '../../hooks/useFetchData';
 import { toast } from 'sonner';
 
 function ListProducts({ products }) {
-  const searchProducts = JSON.parse(localStorage.getItem('searchProducts'))
+  // Obtén el valor de 'searchProducts' de localStorage
+  const searchProductsRaw = localStorage.getItem('searchProducts');
+
+  // Verifica que el valor no sea "undefined" antes de intentar parsearlo como JSON
+  const searchProducts = searchProductsRaw && searchProductsRaw !== 'undefined' ? JSON.parse(searchProductsRaw) : [];
+
   const { tipo } = useParams();
-  const { data: typeProducts, loading, error } = useFetch(`http://localhost:40571/AppElCerro/resources/producto/productostipo/${tipo}`);
+  const { data: typeProducts, loading, error } = useFetch(`http://localhost:8080/AppElCerro/resources/producto/productostipo/${tipo}`);
+
+  // Si hay un error en la petición, muestra un mensaje de error con toast
   if (error != null) {
     toast.error(error);
   }
@@ -22,8 +29,21 @@ function ListProducts({ products }) {
       </div>
       <div className="list-grid">
         {tipo ?
-          loading ? loading : typeProducts && typeProducts?.map(product => {
-            return (
+          // Si hay un tipo, muestra los productos cargados por tipo
+          loading ? loading : typeProducts && typeProducts?.map(product => (
+            <CardProduct
+              key={product.id}
+              name={product.nombre}
+              description={product.descripcion}
+              price={product.precio}
+              id={product.id}
+              img={product.img}
+            />
+          ))
+          :
+          searchProducts ?
+            // Si hay productos de búsqueda, muéstralos
+            searchProducts.map(product => (
               <CardProduct
                 key={product.id}
                 name={product.nombre}
@@ -32,39 +52,22 @@ function ListProducts({ products }) {
                 id={product.id}
                 img={product.img}
               />
-            )
-          })
-          :
-          searchProducts ?
-            searchProducts && searchProducts.map(product => {
-              return (
-                <CardProduct
-                  key={product.id}
-                  name={product.nombre}
-                  description={product.descripcion}
-                  price={product.precio}
-                  id={product.id}
-                  img={product.img}
-                />
-              )
-            })
+            ))
             :
-            products && products.map(product => {
-              return (
-                <CardProduct
-                  key={product.id}
-                  name={product.nombre}
-                  description={product.descripcion}
-                  price={product.precio}
-                  id={product.id}
-                  img={product.img}
-                />
-              )
-            })}
+            // Si no hay tipo ni productos de búsqueda, muestra los productos propios
+            products && products.map(product => (
+              <CardProduct
+                key={product.id}
+                name={product.nombre}
+                description={product.descripcion}
+                price={product.precio}
+                id={product.id}
+                img={product.img}
+              />
+            ))}
       </div>
     </div>
-  )
-
+  );
 }
 
 export default ListProducts;

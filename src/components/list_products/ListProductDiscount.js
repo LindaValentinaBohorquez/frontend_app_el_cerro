@@ -10,9 +10,9 @@ function ListProductsDiscount() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        let apiUrl = 'http://localhost:40571/AppElCerro/resources/detallexpromo/detallesxpromos';
+        let apiUrl = 'http://localhost:8080/AppElCerro/resources/detallexpromo/detallesxpromos';
         if (tipo) {
-          apiUrl = `http://localhost:40571/AppElCerro/resources/detallexpromo/detallesxpromos/${tipo}`;
+          apiUrl = `http://localhost:8080/AppElCerro/resources/detallexpromo/detallesxpromos/${tipo}`;
         }
 
         const response = await fetch(apiUrl);

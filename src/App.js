@@ -15,7 +15,7 @@ import useFetch from './hooks/useFetchData';
 import ListProductsDiscount from './components/list_products/ListProductDiscount';
 
 function App() {
-  const { data: products, error } = useFetch("http://localhost:40571/AppElCerro/resources/producto/productos");
+  const { data: products, error } = useFetch("http://localhost:8080/AppElCerro/resources/producto/productos");
   if (error != null) {
     toast.error(error);
   }

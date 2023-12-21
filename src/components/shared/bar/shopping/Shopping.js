@@ -91,4 +91,3 @@ function Shopping({ isOpen, closeModal }) {
 }
 
 export default Shopping;
-
