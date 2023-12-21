@@ -62,11 +62,14 @@ src/
 
 2. **List Products:**
    - Contiene `CardDiscount` y `CardProduct`.
-   - (Espacio para Mafer)
+   - `CardDiscount` Determina el producto con el descuento, con la funcionalidad de agregar el producto
+   - `CardProduct` Agrega el producto al carrito, tomando la información del producto a travez de la componente props
 
 3. **Payment:**
-   - (Espacio para Mafer)
    - Contiene los steps del proceso de pago.
+   - `Step1`  Toma la lista de productos de Shopping, calcula y muestra el total de la compra, permitiendo la navegacion entre diferentes pasos
+   - `Step2` Recopila y procesa la información personal del usuario, realiza operaciones en el servidor relacionadas con el usuario y el carrito de compras
+   - `Step3` Proporciona al usuario un resumen del costo total de la compra, tomando las consultas del carrito para realizar las operaciones pertinentes
 
 4. **Shared:**
    - **Bar:**
