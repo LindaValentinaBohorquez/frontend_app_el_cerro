@@ -12,6 +12,7 @@ const Step3 = ({ formData, total }) => {
     const totalGeneral = subtotal + bolsaPlastica + costoEnvio;
 
     const handleIconClick = () => {
+        
         navigate("/payment/step3");
     };
 

@@ -37,7 +37,6 @@ const Step2 = ({ formData, handleNextStep }) => {
             if (userResponse === null) {
                 console.log('Usuario no encontrado, creando nuevo usuario');
 
-                // Usuario no encontrado, crear nuevo usuario
                 const createUserResponse = await createUser('http://localhost:8080/AppElCerro/resources/usuario/usuariosCrear', editedData);
 
                 console.log('createUserResponse:', createUserResponse);
@@ -73,7 +72,6 @@ const Step2 = ({ formData, handleNextStep }) => {
                 const cartId = cartResponse.id;
                 console.log('cartId:', cartId);
 
-                // Puedes acceder a otras propiedades si las necesitas
                 const cartActivo = cartResponse.activo;
                 console.log('cartActivo:', cartActivo);
 
@@ -94,15 +92,12 @@ const Step2 = ({ formData, handleNextStep }) => {
             if (response && response.headers && response.headers.get('content-type') && response.headers.get('content-type').includes('application/json')) {
                 const json = await response.json();
 
-                // Log the JSON content for debugging
                 console.log(`${entityName} JSON response:`, json);
 
-                // Check if the response is an object with an 'id' property
                 if (json && typeof json === 'object' && 'id' in json) {
                     return json.id;
                 }
 
-                // If the response does not have an 'id' property, consider it invalid
                 console.error(`Error: La respuesta del servidor para ${entityName} no contiene una propiedad 'id' válida.`);
                 throw new Error(`Error: La respuesta del servidor para ${entityName} no contiene una propiedad 'id' válida.`);
             } else {
@@ -247,7 +242,7 @@ const Step2 = ({ formData, handleNextStep }) => {
                         id_producto: {
                             id: productId,
                         },
-                        cantidad: 1  // Puedes dejarlo como número si es apropiado
+                        cantidad: 1  
                     };
     
                     try {
@@ -269,10 +264,6 @@ const Step2 = ({ formData, handleNextStep }) => {
             throw error;
         }
     };
-    
-    // Resto del código (sin cambios)
-    
-    
     
     const addProductToCart = async (url, data) => {
         try {
@@ -299,9 +290,6 @@ const Step2 = ({ formData, handleNextStep }) => {
         }
     };
     
-
-
-
 
     return (
         <div className="step2-title">
